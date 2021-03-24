@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 15px;
+}
+.attribution{
+    text-align: center;
+}
+
+@keyframes slideInFromRight {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slideFromLeft{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slideFromTop{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (min-width: 414px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        animation: 1s ease-out 0s 1 slideFromTop;
+    }
+    .header h1{
+        color: #4D4E66;
+    }
+    .header h2{
+        text-align: center;
+        margin-top:  50px;
+        font-weight: 200;
+        color: #6E6E70;
+    }
+    .header p{
+        width: 90%;
+        text-align: center;
+        line-height: 1.8;
+        color: #B3B3B7;
+    }
+
+    .four-cards-center{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        animation: 1s ease-out 0s 1 slideFromLeft;
+        cursor: pointer;
+    }
+
+    .supervisor, .team-builder, .karma, .calculator{
+        border-radius: 20px;
+        min-height: 250px;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+        position: relative;
+        width: 80%;
+    }
+    .box-color-aqua{
+        background-color: #3FD6D8;
+        min-height: 3px;
+        border-radius: 20px;
+        width: 93%;
+        position: absolute;
+        top: 0px;
+        left: 13px;
+    }
+    .box-color-red{
+        background-color: #DD5556;
+        min-height: 3px;
+        border-radius: 20px;
+        width: 93%;
+        position: absolute;
+        top: 0px;
+        left: 13px;
+    }
+    .box-color-yellow{
+        background-color: #F5AE51;
+        min-height: 3px;
+        border-radius: 20px;
+        width: 93%;
+        position: absolute;
+        top: 0px;
+        left: 13px;
+    }
+    .box-color-blue{
+        background-color: #549BE7;
+        min-height: 3px;
+        border-radius: 20px;
+        width: 93%;
+        position: absolute;
+        top: 0px;
+        left: 13px;
+    }
+    .supervisor h1, .team-builder h1, .karma h1, .calculator h1{
+        padding: 20px 20px 0px 20px;
+        color: #535366;
+    }
+    .supervisor p, .team-builder p, .karma p, .calculator p{
+        padding: 0px 20px 0px 20px;
+        color: #B3B3B7;
+        width: 80%;
+    }
+    .supervisor img, .team-builder img, .karma img, .calculator img{
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+    }
+
+  }
+
+  @media only screen and (min-width: 1000px){
+        .header{
+            animation: 1s ease-out 0s 1 slideFromTop;
+        }
+        .header p{
+            width: 500px;
+        }
+        .four-cards-center{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            place-items: center;
+            cursor: pointer;
+        }
+        .supervisor{
+            grid-row: 2/3;
+            animation: 1s ease-out 0s 1 slideFromLeft;
+        }
+        .calculator{
+            grid-column: 3/4;
+            grid-row: 2/3;
+            animation: 1s ease-out 0s 1 slideInFromRight;
+        }
+        .karma{
+            grid-column: 2/3;
+            grid-row: 3/4;
+            animation: 1s ease-out 0s 1 slideFromLeft;
+        }
+        .team-builder{
+            animation: 1s ease-out 0s 1 slideInFromRight;
+        }
+  }
